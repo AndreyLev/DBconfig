@@ -23,6 +23,7 @@ public class KotlinConnector {
     this.password = password;
   }
 
+
   public SQLiteDataSource doSQL() throws SQLException {
 
     dataSource.setUrl(url);
