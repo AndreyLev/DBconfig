@@ -10,7 +10,6 @@ import org.springframework.core.io.ClassPathResource;
 import org.sqlite.SQLiteDataSource;
 
 @Configuration
-@ComponentScan("ru.rosbank.javaschool")
 public class JavaConfig {
   @Bean
   public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
