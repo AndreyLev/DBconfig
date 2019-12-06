@@ -7,6 +7,9 @@ beans {
         location = 'classpath:db.properties'
     }
 
-    source SQLiteDataSource
-    connector GroovyConnector, source, '${db.url}', '${db.username}', '${db.password}'
+    dataSource SQLiteDataSource, {
+        url = '${db.url}'
+    }
+
+    connector GroovyConnector, ref(dataSource), '${db.username}', '${db.password}'
 }

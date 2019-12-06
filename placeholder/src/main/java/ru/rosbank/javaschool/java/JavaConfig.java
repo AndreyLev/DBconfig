@@ -8,6 +8,8 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.io.ClassPathResource;
 import org.sqlite.SQLiteDataSource;
 
+import javax.sql.DataSource;
+
 public class JavaConfig {
   @Bean
   public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
@@ -17,16 +19,17 @@ public class JavaConfig {
   }
 
   @Bean
-  public SQLiteDataSource dataSource() {
-    return new SQLiteDataSource();
+  public DataSource dataSource(@Value("${db.url}")String url) {
+    SQLiteDataSource dataSource = new SQLiteDataSource();
+    dataSource.setUrl(url);
+    return dataSource;
   }
 
   @Bean
-  public JavaDataBaseConnector dataBaseConnector(SQLiteDataSource dataSource,
-                                                 @Value("${db.url}") String url,
+  public JavaDataBaseConnector dataBaseConnector(DataSource sqliteDataSource,
                                                  @Value("${db.username}") String username,
                                                  @Value("${db.password}") String password) {
-    return new JavaDataBaseConnector(dataSource(), url, username, password);
+    return new JavaDataBaseConnector(sqliteDataSource, username, password);
   }
 
 }
