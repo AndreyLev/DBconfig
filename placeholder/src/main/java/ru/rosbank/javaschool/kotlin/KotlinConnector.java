@@ -3,12 +3,10 @@ package ru.rosbank.javaschool.kotlin;
 import lombok.*;
 import org.sqlite.SQLiteDataSource;
 import org.springframework.beans.factory.annotation.Value;
-import java.sql.Connection;
-import java.sql.SQLException;
+
 
 
 @Getter
-@Setter
 public class KotlinConnector {
 
   private SQLiteDataSource dataSource;
