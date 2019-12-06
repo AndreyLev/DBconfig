@@ -4,6 +4,7 @@ import lombok.Getter;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.sqlite.SQLiteDataSource;
 
 import javax.sql.DataSource;
 
@@ -12,7 +13,7 @@ import javax.sql.DataSource;
 @Component("dbconnector")
 public class AnnotationConnector{
 
-    private DataSource dataSource;
+    private SQLiteDataSource dataSource;
     private String username;
     private String password;
 
