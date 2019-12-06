@@ -16,6 +16,8 @@ target
 *.iws
 *.iml
 *.ipr
+*.gitkeep
+*.sqlite
 
 ### NetBeans ###
 /nbproject/private/
