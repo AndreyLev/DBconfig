@@ -15,6 +15,7 @@ class ProgrammaticConnectorTest {
 
     @Test
     public void shouldReturnTrueUrl() {
+
         val context = new GenericApplicationContext();
         context.registerBean(PropertySourcesPlaceholderConfigurer.class, () -> {
             val configurer = new PropertySourcesPlaceholderConfigurer();
@@ -36,6 +37,7 @@ class ProgrammaticConnectorTest {
 
     @Test
     void shouldReturnTrueUser() {
+
         val context = new GenericApplicationContext();
         context.registerBean(PropertySourcesPlaceholderConfigurer.class, () -> {
             val configurer = new PropertySourcesPlaceholderConfigurer();
@@ -57,6 +59,7 @@ class ProgrammaticConnectorTest {
 
     @Test
     void shouldReturnTruePassword() {
+
         val context = new GenericApplicationContext();
         context.registerBean(PropertySourcesPlaceholderConfigurer.class, () -> {
             val configurer = new PropertySourcesPlaceholderConfigurer();
@@ -78,6 +81,7 @@ class ProgrammaticConnectorTest {
 
     @Test
     void connectsToTheDataBaseByLoginAndPassword() throws SQLException {
+
         val context = new GenericApplicationContext();
         context.registerBean(PropertySourcesPlaceholderConfigurer.class, () -> {
             val configurer = new PropertySourcesPlaceholderConfigurer();

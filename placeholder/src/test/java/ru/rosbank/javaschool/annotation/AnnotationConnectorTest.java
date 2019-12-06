@@ -11,6 +11,7 @@ class AnnotationConnectorTest {
 
     @Test
     public void shouldReturnTrueUrl() {
+
         val context = new AnnotationConfigApplicationContext("ru.rosbank.javaschool.annotation");
         val connector = (AnnotationConnector) context.getBean("dbconnector");
 
@@ -22,6 +23,7 @@ class AnnotationConnectorTest {
 
     @Test
     void shouldReturnTrueUser() {
+
         val context = new AnnotationConfigApplicationContext("ru.rosbank.javaschool.annotation");
         val connector = (AnnotationConnector) context.getBean("dbconnector");
 
@@ -33,6 +35,7 @@ class AnnotationConnectorTest {
 
     @Test
     void shouldReturnTruePassword() {
+
         val context = new AnnotationConfigApplicationContext("ru.rosbank.javaschool.annotation");
         val connector = (AnnotationConnector) context.getBean("dbconnector");
 
@@ -44,6 +47,7 @@ class AnnotationConnectorTest {
 
     @Test
     void connectsToTheDataBaseByLoginAndPassword() throws SQLException {
+
         val context = new AnnotationConfigApplicationContext("ru.rosbank.javaschool.annotation");
         val connector = (AnnotationConnector) context.getBean("dbconnector");
 

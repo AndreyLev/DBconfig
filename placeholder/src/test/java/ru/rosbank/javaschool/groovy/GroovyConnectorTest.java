@@ -12,6 +12,7 @@ class GroovyConnectorTest {
 
     @Test
     public void shouldReturnTrueUrl() {
+
         val context = new GenericGroovyApplicationContext("context.groovy");
         GroovyConnector connector = (GroovyConnector) context.getBean("connector");
 
@@ -23,6 +24,7 @@ class GroovyConnectorTest {
 
     @Test
     void shouldReturnTrueUser() {
+
         val context = new GenericGroovyApplicationContext("context.groovy");
         GroovyConnector connector = (GroovyConnector) context.getBean("connector");
 
@@ -34,6 +36,7 @@ class GroovyConnectorTest {
 
     @Test
     void shouldReturnTruePassword() {
+
         val context = new GenericGroovyApplicationContext("context.groovy");
         GroovyConnector connector = (GroovyConnector) context.getBean("connector");
 
@@ -45,6 +48,7 @@ class GroovyConnectorTest {
 
     @Test
     void connectsToTheDataBaseByLoginAndPassword() throws SQLException {
+
         val context = new GenericGroovyApplicationContext("context.groovy");
         GroovyConnector connector = (GroovyConnector) context.getBean("connector");
 

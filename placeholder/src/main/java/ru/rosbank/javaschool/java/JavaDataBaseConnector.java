@@ -16,10 +16,10 @@ import java.sql.SQLException;
 @Setter
 public class JavaDataBaseConnector {
 
-    private SQLiteDataSource dataSource;
-    private String url;
-    private String username;
-    private String password;
+    private final SQLiteDataSource dataSource;
+    private final String url;
+    private final String username;
+    private final String password;
 
 
 

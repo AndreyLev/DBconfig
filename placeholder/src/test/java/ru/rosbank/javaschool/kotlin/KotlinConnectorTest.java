@@ -13,6 +13,7 @@ class KotlinConnectorTest {
 
     @Test
     public void shouldReturnTrueUrl() {
+
         val factory = new DefaultListableBeanFactory();
         factory.setAutowireCandidateResolver(new QualifierAnnotationAutowireCandidateResolver());
         val context = new GenericApplicationContext(factory);
@@ -28,6 +29,7 @@ class KotlinConnectorTest {
 
     @Test
     void shouldReturnTrueUser() {
+
         val factory = new DefaultListableBeanFactory();
         factory.setAutowireCandidateResolver(new QualifierAnnotationAutowireCandidateResolver());
         val context = new GenericApplicationContext(factory);
@@ -43,6 +45,7 @@ class KotlinConnectorTest {
 
     @Test
     void shouldReturnTruePassword() {
+
         val factory = new DefaultListableBeanFactory();
         factory.setAutowireCandidateResolver(new QualifierAnnotationAutowireCandidateResolver());
         val context = new GenericApplicationContext(factory);
@@ -58,6 +61,7 @@ class KotlinConnectorTest {
 
     @Test
     void connectsToTheDataBaseByLoginAndPassword() throws SQLException {
+
         val factory = new DefaultListableBeanFactory();
         factory.setAutowireCandidateResolver(new QualifierAnnotationAutowireCandidateResolver());
         val context = new GenericApplicationContext(factory);
