@@ -3,6 +3,7 @@ package ru.rosbank.javaschool.java;
 import lombok.val;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import java.sql.SQLException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,7 +12,8 @@ class JavaDataBaseConnectorTest {
 
     @Test
     public void shouldReturnTrueUrl() {
-        val context = new AnnotationConfigApplicationContext("ru.rosbank.javaschool.java");
+
+        val context = new AnnotationConfigApplicationContext(JavaConfig.class);
         JavaDataBaseConnector connector = context.getBean("dataBaseConnector", JavaDataBaseConnector.class);
 
         String result = connector.getUrl();
@@ -22,7 +24,8 @@ class JavaDataBaseConnectorTest {
 
     @Test
     void shouldReturnTrueUser() {
-        val context = new AnnotationConfigApplicationContext("ru.rosbank.javaschool.java");
+
+        val context = new AnnotationConfigApplicationContext(JavaConfig.class);
         JavaDataBaseConnector connector = context.getBean("dataBaseConnector", JavaDataBaseConnector.class);
 
         String result = connector.getUsername();
@@ -33,7 +36,8 @@ class JavaDataBaseConnectorTest {
 
     @Test
     void shouldReturnTruePassword() {
-        val context = new AnnotationConfigApplicationContext("ru.rosbank.javaschool.java");
+
+        val context = new AnnotationConfigApplicationContext(JavaConfig.class);
         JavaDataBaseConnector connector = context.getBean("dataBaseConnector", JavaDataBaseConnector.class);
 
         String result = connector.getPassword();
@@ -44,7 +48,8 @@ class JavaDataBaseConnectorTest {
 
     @Test
     void connectsToTheDataBaseByLoginAndPassword() throws SQLException {
-        val context = new AnnotationConfigApplicationContext("ru.rosbank.javaschool.java");
+
+        val context = new AnnotationConfigApplicationContext(JavaConfig.class);
         JavaDataBaseConnector connector = context.getBean("dataBaseConnector", JavaDataBaseConnector.class);
 
         val dataSource = connector.doSQL();
