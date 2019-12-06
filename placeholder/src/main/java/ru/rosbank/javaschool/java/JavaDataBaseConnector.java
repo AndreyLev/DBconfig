@@ -11,7 +11,6 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 public class JavaDataBaseConnector {
