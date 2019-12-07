@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Value;
 @Getter
 public class KotlinConnector {
 
-  private SQLiteDataSource dataSource;
-  private String username;
-  private String password;
+  private final SQLiteDataSource dataSource;
+  private final String username;
+  private final String password;
 
   public KotlinConnector(SQLiteDataSource dataSource, @Value("${db.username}") String username,@Value("${db.password}") String password) {
     this.dataSource = dataSource;

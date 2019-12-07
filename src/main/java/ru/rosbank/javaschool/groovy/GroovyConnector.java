@@ -9,9 +9,9 @@ import org.sqlite.SQLiteDataSource;
 @Getter
 public class GroovyConnector {
 
-    private SQLiteDataSource dataSource;
-    private String username;
-    private String password;
+    private final SQLiteDataSource dataSource;
+    private final String username;
+    private final String password;
 
 }
 

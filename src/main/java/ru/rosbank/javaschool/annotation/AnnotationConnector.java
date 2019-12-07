@@ -12,9 +12,9 @@ import javax.sql.DataSource;
 @Component("dbconnector")
 public class AnnotationConnector{
 
-    private DataSource dataSource;
-    private String username;
-    private String password;
+    private final DataSource dataSource;
+    private final String username;
+    private final String password;
 
     public AnnotationConnector(DataSource dataSource,
                                @Value("${db.username}") String username,
